@@ -13,6 +13,8 @@ xiang::xiang()
 	pos.y = fity(rand);
 	v.x = fitvx(rand);
 	v.y = fitvy(rand);
+
+	numxiang++;
 }
 
 void xiang::move()
@@ -271,7 +273,7 @@ void xiang::draw(Graphics & gfx)const
 }
 void xiang::pengzhuang(Player & a)
 {
-
+		//static int i = numxiang;//第一次运行这个函数，i会初始化，以后读取前一帧的值
 		if (a.getPos().x > pos.x - 5 &&
 			a.getPos().x< pos.x + res.x + 5 &&
 			a.getPos().y> pos.y - 5 &&
@@ -279,5 +281,7 @@ void xiang::pengzhuang(Player & a)
 		{
 			chidao = 1;
 			chidaoId = a.getPlayerId();
+
+			numxiang--;
 		}
 }

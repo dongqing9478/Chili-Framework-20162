@@ -28410,7 +28410,7 @@ private:
 	/*  User Variables    */
 	bool gameStarted = 0;
 	bool gameend = 0;
-	static constexpr int numxiang = 100;
+	static constexpr int numxiang = 10;
 	xiang xiang[numxiang];
 	Player PlayerA;
 	Player PlayerB;
@@ -28418,4 +28418,4 @@ private:
 	static constexpr Vec2 fenmiam = { 150,175 };
 	static constexpr Vec2 endhuamian = { 84,64 };
 	/********************************/
-};//a
+};//a 

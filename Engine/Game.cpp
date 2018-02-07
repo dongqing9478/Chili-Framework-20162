@@ -80,12 +80,14 @@ void Game::ComposeFrame()
 		PlayerB.drawBfenshu(gfx);
 	}
 
-	bool alldie = 1;//判断游戏是否结束
+	/*bool alldie = 1;//判断游戏是否结束
 	for (int i = 0; i < numxiang; i++)
 	{
 		alldie = alldie && xiang[i].chimeichidao();
 		gameend = alldie;
-	}
+	}*/
+	if (xiang[0].getnumxiang() == 0)
+		gameend = 1;
 	if (gameend)//如果游戏结束了
 		drawend(Graphics::center.x - endhuamian.x *0.5, Graphics::center.y - endhuamian.y*0.5);//绘制游戏结束
 }

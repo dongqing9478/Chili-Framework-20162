@@ -17,7 +17,7 @@ public:
 	void draw(Graphics& gfx) const;
 	bool chimeichidao() const { return chidao; }
 	int hqchidaoId() const { return chidaoId; }//获取吃到了吗
-
+	int getnumxiang()const { return numxiang; }//放回当前翔存活的总数
 	static constexpr Vec2 res = { 24,24 };//翔的分辨率xiang:res
 
 private:
@@ -33,4 +33,5 @@ private:
 	Vec2 v{3,3};//翔的速度
 	bool chidao = 0;
 	int chidaoId = -1;
+	static int numxiang;//翔总数且是变量
 };

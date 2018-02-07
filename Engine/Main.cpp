@@ -22,6 +22,8 @@
 #include "Game.h"
 #include "ChiliException.h"
 
+int xiang::numxiang = 0;
+
 int WINAPI wWinMain( HINSTANCE hInst,HINSTANCE,LPWSTR pArgs,INT )
 {
 	try
