@@ -28418,4 +28418,4 @@ private:
 	static constexpr Vec2 fenmiam = { 150,175 };
 	static constexpr Vec2 endhuamian = { 84,64 };
 	/********************************/
-};//a 
+};//
