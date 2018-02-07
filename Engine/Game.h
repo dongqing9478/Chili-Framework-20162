@@ -44,7 +44,7 @@ private:
 	void UpdateModel();
 	/********************************/
 	/*  User Functions              */
-	void Game::jcgameStarted(const Keyboard& kbd)//
+	void jcgameStarted(const Keyboard& kbd)//
 	{
 		if (kbd.KeyIsPressed(VK_RETURN))
 			gameStarted = 1;
@@ -53,10 +53,10 @@ private:
 	{
 		return a + b;
 	}
-	void jcgameStarted(const Keyboard& kbd);//检查游戏是否开始了，按了回车则游戏结束
-	void jcgameend(const xiang& xiang);//检查游戏翔是否吃完结束了
 
-	void Game::drawfengmian(int x, int y)
+//	void jcgameend(const xiang& xiang);//检查游戏翔是否吃完结束了
+
+	void drawfengmian(int x, int y)
 	{
 		gfx.PutPixel(0 + x, 0 + y, 208, 34, 34);
 		gfx.PutPixel(1 + x, 0 + y, 208, 34, 34);
@@ -26310,7 +26310,7 @@ private:
 		gfx.PutPixel(149 + x, 174 + y, 208, 34, 34);
 
 	}
-	void Game::drawend(int x, int y)
+	void drawend(int x, int y)
 	{
 		gfx.PutPixel(49 + x, 0 + y, 0, 146, 14);
 		gfx.PutPixel(50 + x, 0 + y, 0, 146, 14);
@@ -28410,7 +28410,7 @@ private:
 	/*  User Variables    */
 	bool gameStarted = 0;
 	bool gameend = 0;
-	static constexpr int numxiang = 10;
+	static constexpr int numxiang = 100;
 	xiang xiang[numxiang];
 	Player PlayerA;
 	Player PlayerB;
@@ -28418,4 +28418,4 @@ private:
 	static constexpr Vec2 fenmiam = { 150,175 };
 	static constexpr Vec2 endhuamian = { 84,64 };
 	/********************************/
-};
+};//a

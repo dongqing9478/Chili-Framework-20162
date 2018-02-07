@@ -63,9 +63,9 @@ void Game::UpdateModel()
 
 
 void Game::ComposeFrame()
-{	
-	if(!gameStarted)//游戏没有开始画封面
-	drawfengmian(Graphics::center.x- fenmiam.x *0.5, Graphics::center.y- fenmiam.y*0.5);//绘制游戏封面
+{
+	if (!gameStarted)//游戏没有开始画封面
+		drawfengmian(Graphics::center.x - fenmiam.x *0.5, Graphics::center.y - fenmiam.y*0.5);//绘制游戏封面
 	else//如果游戏开始了就下达指令
 	{
 		for (int i = 0; i < numxiang; i++)
@@ -80,14 +80,15 @@ void Game::ComposeFrame()
 		PlayerB.drawBfenshu(gfx);
 	}
 
-	bool alldie=1;//判断游戏是否结束
+	bool alldie = 1;//判断游戏是否结束
 	for (int i = 0; i < numxiang; i++)
 	{
 		alldie = alldie && xiang[i].chimeichidao();
-		gameend= alldie;
+		gameend = alldie;
 	}
-	if(gameend)//如果游戏结束了
-	drawend(Graphics::center.x - endhuamian.x *0.5, Graphics::center.y - endhuamian.y*0.5);//绘制游戏结束
+	if (gameend)//如果游戏结束了
+		drawend(Graphics::center.x - endhuamian.x *0.5, Graphics::center.y - endhuamian.y*0.5);//绘制游戏结束
+}
 
 
 
